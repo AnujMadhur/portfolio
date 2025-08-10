@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuj Mahajan | Data Science Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        Message sent successfully!
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    Anuj Mahajan
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="pdfs/RR updated Anuj.pdf" class="cta-btn" target="_blank">View Resume</a>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content fade-up">
+                    <div class="hero-badge">
+                        <i class="fas fa-rocket"></i>
+                        Available for opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Anuj Mahajan</span><br>
+                        Data Science Enthusiast
+                    </h1>
+                    <p class="hero-subtitle">
+                        Final-year Data Science student passionate about transforming complex data into actionable insights. 
+                        Specializing in Python, Machine Learning, and statistical analysis.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-eye"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-message"></i> Let's Talk
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Dedication</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual fade-up">
+                    <div class="tech-orbit">
+                        <div class="tech-icon"><i class="fab fa-python"></i></div>
+                        <div class="tech-icon"><i class="fas fa-database"></i></div>
+                        <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                        <div class="tech-icon"><i class="fab fa-github"></i></div>
+                        <div class="center-avatar">
+                            <img src="images/m3.jpg" alt="Anuj Mahajan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">
+                    Passionate about turning data into meaningful stories and actionable insights
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content fade-up">
+                    <h3>Data Science Student & Aspiring Analyst</h3>
+                    <p class="about-text">
+                        I'm a final-year Data Science student at R.C. Patel Institute of Technology, Shirpur, 
+                        with a passion for uncovering insights from complex datasets. My journey in data science 
+                        has been driven by curiosity and a desire to solve real-world problems through analytics.
+                    </p>
+                    <p class="about-text">
+                        Beyond academics, I'm constantly exploring new technologies and methodologies in machine learning, 
+                        data visualization, and statistical analysis. Currently pursuing Japanese N4 certification and building projects 
+                        that showcase my technical skills and creative problem-solving abilities.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4>Education</h4>
+                                <p>B.Tech in Data Science</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Shirpur, India</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4>Interests</h4>
+                                <p>ML, Analytics, Web Dev</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div>
+                                <h4>Languages</h4>
+                                <p>English, Hindi, 
+                                    Japanese (N4 Level)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual fade-up">
+                    <div class="profile-photo">
+                        <img src="images/m2.jpg" alt="Anuj Mahajan - Data Science Student">
+                        <div class="profile-info">
+                            <div class="profile-name">ANUJ MAHAJAN</div>
+                            <div class="profile-title">Data Science Enthusiast</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">
+                    Technologies and tools I use to bring ideas to life
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card fade-up">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <h3>Programming</h3>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">Core languages</p>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">JavaScript Basic</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-up">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h3>Data Science</h3>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">Analysis & ML</p>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-up">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div>
+                            <h3>Visualization</h3>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">Data presentation</p>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">MS Excel</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-up">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3>Web Development</h3>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">Frontend & Backend</p>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML & CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-up">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div>
+                            <h3>Tools & Platforms</h3>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">Development tools</p>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Jupyter</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-up">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3>Machine Learning</h3>
+                            <p style="color: var(--text-muted); font-size: 0.875rem;">AI & ML frameworks</p>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CNN</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">OpenCV</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    A showcase of my work in data science, machine learning, and web development
+                </p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-up">
+                    <div class="project-header">
+                        <h3 class="project-title">Wanderlust - Property Rental Platform</h3>
+                        <p class="project-type">Full-Stack Web Application</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Developed a comprehensive property rental platform with secure user authentication, 
+                            payment integration via Stripe, and interactive maps using OpenStreetMap. Features 
+                            include property listings, booking system, and user reviews.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Stripe API</span>
+                            <span class="tech-tag">Passport.js</span>
+                        </div>
+                        <!-- <div class="project-links">
+                            <a href="https://github.com/AnujMadhur" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <div class="project-card fade-up">
+                    <div class="project-header">
+                        <h3 class="project-title">Automated Title Verification System</h3>
+                        <p class="project-type">NLP & Machine Learning Project</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Developed a scalable title verification system using Python and NLP, analyzing 160K+ titles 
+                            with 92% accuracy and enforcing content rules. Optimized search with indexing and string 
+                            handling, enabling &lt;1.5s response time and cutting duplicate submissions by 35%.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">String Processing</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <!-- <div class="project-links">
+                            <a href="https://github.com/AnujMadhur" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-chart-line"></i> View Results
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <div class="project-card fade-up">
+                    <div class="project-header">
+                        <h3 class="project-title">Japanese Vocabulary Master</h3>
+                        <p class="project-type">Educational Web Application</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Developed an interactive Japanese vocabulary learning platform using JavaScript, HTML5, 
+                            and CSS3, featuring adaptive quizzes and spaced repetition for improved retention. Built 
+                            data import pipelines for CSV/Excel, integrated real-time performance analytics, and 
+                            implemented dynamic difficulty adjustments, boosting user engagement by 40%.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Data Processing</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                        <!-- <div class="project-links">
+                            <a href="https://github.com/AnujMadhur" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Try It Out
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <div class="project-card fade-up">
+                    <div class="project-header">
+                        <h3 class="project-title">Smart India Hackathon 2024</h3>
+                        <p class="project-type">Gamified Learning Platform</p>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Led team as College Level Nominee in developing a gamified Snake & Ladder platform 
+                            to promote constitutional literacy. Contributed to innovative idea design and 
+                            functional prototype development, combining education with engaging gameplay mechanics.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Game Development</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Educational Tech</span>
+                            <span class="tech-tag">Team Leadership</span>
+                            <span class="tech-tag">Prototype Design</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- <a href="https://github.com/AnujMadhur" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a> -->
+                            <a href="pdfs/SIH Nomination.pdf" class="project-link">
+                                <i class="fas fa-trophy"></i> Competition Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">
+                    Ready to discuss opportunities or collaborate on exciting projects
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <div class="contact-item" onclick="openEmail()">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p style="color: var(--text-muted); margin: 0;">anujmahajan332@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" onclick="openLinkedIn()">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p style="color: var(--text-muted); margin: 0;">Connect with me</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" onclick="openGitHub()">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p style="color: var(--text-muted); margin: 0;">View my code</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p style="color: var(--text-muted); margin: 0;">Shirpur, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-up">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Tell me about your project or opportunity..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/anuj-mahajan-132292289" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/AnujMadhur" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:anujmahajan332@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p class="copyright">
+                    © 2024 Anuj Mahajan. Crafted with passion and powered by data.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
