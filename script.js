@@ -258,30 +258,6 @@ sparkleStyle.textContent = `
 `;
 document.head.appendChild(sparkleStyle);
 
-// Typing animation for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
-
-// Initialize typing animation when page loads
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero-title');
-        const originalText = heroTitle.innerHTML;
-        typeWriter(heroTitle, originalText.replace(/<[^>]*>/g, ''), 50);
-    }, 1500);
-});
-
 // Add parallax effect to hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
