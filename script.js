@@ -258,16 +258,57 @@ sparkleStyle.textContent = `
 `;
 document.head.appendChild(sparkleStyle);
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroVisual = document.querySelector('.hero-visual');
-    const heroContent = document.querySelector('.hero-content');
+// Theme toggle functionality - FIXED
+const themeToggle = document.getElementById('theme-toggle');
+let isDarkMode = true; // Default to dark mode
+
+themeToggle.addEventListener('click', () => {
+    isDarkMode = !isDarkMode;
     
-    if (heroVisual && scrolled < window.innerHeight) {
-        heroVisual.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+    if (isDarkMode) {
+        document.body.classList.remove('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.body.classList.add('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
+    
+    // Create toggle effect
+    createFloatingHeart({ clientX: themeToggle.offsetLeft + 25, clientY: themeToggle.offsetTop + 25 });
+    
+    // Save theme preference
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+});
+
+// Load saved theme preference
+window.addEventListener('load', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        isDarkMode = false;
+        document.body.classList.add('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+});
+
+// Add entrance animations with stagger effect
+const animateElements = document.querySelectorAll('.skill-card, .project-card, .contact-item');
+const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0) scale(1)';
+            }, index * 100);
+            staggerObserver.unobserve(entry.target);
+        }
+    });
+});
+
+animateElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px) scale(0.9)';
+    el.style.transition = 'all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)';
+    staggerObserver.observe(el);
 });
 
 // Add mouse follow effect for cursor
@@ -326,60 +367,6 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = progress + '%';
 });
 
-// Add entrance animations with stagger effect
-const animateElements = document.querySelectorAll('.skill-card, .project-card, .contact-item');
-const staggerObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0) scale(1)';
-            }, index * 100);
-            staggerObserver.unobserve(entry.target);
-        }
-    });
-});
-
-animateElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px) scale(0.9)';
-    el.style.transition = 'all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)';
-    staggerObserver.observe(el);
-});
-
-// Add theme toggle functionality (bonus)
-function createThemeToggle() {
-    const themeToggle = document.createElement('button');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    themeToggle.style.position = 'fixed';
-    themeToggle.style.bottom = '20px';
-    themeToggle.style.right = '20px';
-    themeToggle.style.width = '50px';
-    themeToggle.style.height = '50px';
-    themeToggle.style.borderRadius = '50%';
-    themeToggle.style.border = 'none';
-    themeToggle.style.background = 'var(--primary)';
-    themeToggle.style.color = 'white';
-    themeToggle.style.cursor = 'pointer';
-    themeToggle.style.zIndex = '1000';
-    themeToggle.style.boxShadow = '0 4px 20px rgba(59, 130, 246, 0.3)';
-    themeToggle.style.transition = 'all 0.3s ease';
-
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-theme');
-        const icon = themeToggle.querySelector('i');
-        icon.className = document.body.classList.contains('light-theme') ? 'fas fa-sun' : 'fas fa-moon';
-        
-        // Create toggle effect
-        createFloatingHeart({ clientX: themeToggle.offsetLeft, clientY: themeToggle.offsetTop });
-    });
-
-    document.body.appendChild(themeToggle);
-}
-
-// Initialize theme toggle
-createThemeToggle();
-
 // Add keyboard navigation
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
@@ -401,6 +388,57 @@ focusStyle.textContent = `
 `;
 document.head.appendChild(focusStyle);
 
+// Performance optimization - Debounce scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Optimized scroll handler
+const optimizedScrollHandler = debounce(() => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    progressBar.style.width = progress + '%';
+    
+    // Header scroll effect
+    if (scrollTop > 100) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled');
+    }
+}, 10);
+
+window.addEventListener('scroll', optimizedScrollHandler);
+
+// Add smooth reveal animations for sections
+const revealElements = document.querySelectorAll('section');
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+revealElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    revealObserver.observe(el);
+});
+
 console.log('🚀 Portfolio loaded successfully!');
 console.log('💼 Anuj Mahajan - Data Science Enthusiast');
 console.log('📧 Contact: anujmahajan332@gmail.com');
+console.log('🎨 Theme toggle functionality working properly!');

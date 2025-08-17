@@ -14,7 +14,7 @@
         <div class="spinner"></div>
     </div>
 
-    <!-- Success Message - Fixed positioning issue -->
+    <!-- Success Message -->
     <div class="success-message" id="successMessage">
         <i class="fas fa-check-circle"></i>
         Message sent successfully!
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <!-- Header - Made responsive -->
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <div class="nav-container">
@@ -45,9 +45,13 @@
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <!-- Mobile resume button inside nav -->
+                        <li class="mobile-resume-item">
+                            <a href="pdfs/RR updated Anuj.pdf" class="mobile-resume-btn" target="_blank">
+                                <i class="fas fa-file-pdf"></i> View Resume
+                            </a>
+                        </li>
                     </ul>
-                    <!-- Moved resume button inside nav for mobile -->
-                    <!-- <a href="" class="" target="_blank"></a> -->
                 </nav>
                 <!-- Desktop resume button -->
                 <a href="pdfs/RR updated Anuj.pdf" class="cta-btn desktop-resume" target="_blank">View Resume</a>
@@ -58,15 +62,11 @@
         </div>
     </header>
 
-    <!-- Hero Section - Fixed text overflow -->
+    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content fade-up">
-                    <div class="hero-badge">
-                        <i class="fas fa-rocket"></i>
-                        Available for opportunities
-                    </div>
                     <h1 class="hero-title">
                         Hi, I'm <span class="gradient-text">Anuj Mahajan</span><br>
                         Data Science Enthusiast
@@ -77,10 +77,10 @@
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-eye"></i> View My Work
+                            <i class="fas fa-eye"></i>   View My Work
                         </a>
                         <a href="#contact" class="btn btn-outline">
-                            <i class="fas fa-message"></i> Let's Talk
+                            <i class="fas fa-message"></i>   Let's Talk
                         </a>
                     </div>
                     <div class="hero-stats">
@@ -319,35 +319,35 @@
                 </p>
             </div>
             <div class="projects-grid">
-                <div class="project-card fade-up">
-                    <div class="project-header">
-                        <h3 class="project-title">Wanderlust - Property Rental Platform</h3>
-                        <p class="project-type">Full-Stack Web Application</p>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-description">
-                            Developed a comprehensive property rental platform with secure user authentication, 
-                            payment integration via Stripe, and interactive maps using OpenStreetMap. Features 
-                            include property listings, booking system, and user reviews.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">Stripe API</span>
-                            <span class="tech-tag">Passport.js</span>
-                        </div>
-                        <!-- <div class="project-links">
-                            <a href="https://github.com/AnujMadhur" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div> -->
-                    </div>
-                </div>
+
                 
+<div class="project-card">
+    <div class="project-header">
+        <div class="project-info">
+            <h3 class="project-title">Japanese Vocabulary Master</h3>
+            <p class="project-type">Educational Web Application</p>
+        </div>
+        <a href="https://vocabulary-master-mu.vercel.app/" class="demo-link" target="_blank" rel="noopener noreferrer">
+            <span class="demo-icon">🚀</span> Live Demo
+        </a>
+    </div>
+    <div class="project-body">
+        <p class="project-description">
+            Developed an interactive Japanese vocabulary learning platform using JavaScript, HTML5, 
+            and CSS3, featuring adaptive quizzes and spaced repetition for improved retention. Built 
+            data import pipelines for CSV/Excel, integrated real-time performance analytics, and 
+            implemented dynamic difficulty adjustments, boosting user engagement by 40%.
+        </p>
+        <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">Data Processing</span>
+            <span class="tech-tag">Analytics</span>
+        </div>
+    </div>
+</div>
+
                 <div class="project-card fade-up">
                     <div class="project-header">
                         <h3 class="project-title">Automated Title Verification System</h3>
@@ -366,46 +366,30 @@
                             <span class="tech-tag">String Processing</span>
                             <span class="tech-tag">Data Analysis</span>
                         </div>
-                        <!-- <div class="project-links">
-                            <a href="https://github.com/AnujMadhur" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-chart-line"></i> View Results
-                            </a>
-                        </div> -->
                     </div>
                 </div>
-                
+
                 <div class="project-card fade-up">
                     <div class="project-header">
-                        <h3 class="project-title">Japanese Vocabulary Master</h3>
-                        <p class="project-type">Educational Web Application</p>
+                        <h3 class="project-title">Wanderlust - Property Rental Platform</h3>
+                        <p class="project-type">Full-Stack Web Application</p>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Developed an interactive Japanese vocabulary learning platform using JavaScript, HTML5, 
-                            and CSS3, featuring adaptive quizzes and spaced repetition for improved retention. Built 
-                            data import pipelines for CSV/Excel, integrated real-time performance analytics, and 
-                            implemented dynamic difficulty adjustments, boosting user engagement by 40%.
+                            Developed a comprehensive property rental platform with secure user authentication, 
+                            payment integration via Stripe, and interactive maps using OpenStreetMap. Features 
+                            include property listings, booking system, and user reviews.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Data Processing</span>
-                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Stripe API</span>
+                            <span class="tech-tag">Passport.js</span>
                         </div>
-                        <!-- <div class="project-links">
-                            <a href="https://github.com/AnujMadhur" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Try It Out
-                            </a>
-                        </div> -->
                     </div>
                 </div>
+                
                 
                 <div class="project-card fade-up">
                     <div class="project-header">
@@ -426,10 +410,7 @@
                             <span class="tech-tag">Prototype Design</span>
                         </div>
                         <div class="project-links">
-                            <!-- <a href="https://github.com/AnujMadhur" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a> -->
-                            <a href="pdfs/SIH Nomination.pdf" class="project-link">
+                            <a href="pdfs/SIH Nomination.pdf" class="project-link" target="_blank">
                                 <i class="fas fa-trophy"></i> Competition Certificate
                             </a>
                         </div>
@@ -542,6 +523,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
